@@ -1,26 +1,26 @@
 ------------------------
-min_sup 0.2
+min_sup 0.05
 min_conf 0.7
 ------------------------
 frequent itemsets
-2 4 
-5 
-3 
-1 2 
-1 5 
-1 2 5 
-4 
-2 3 
-2 5 
-1 
-1 3 
-1 2 3 
-2 
+39 
+48 32 39 
+32 
+48 41 
+38 
+48 38 39 
+38 39 
+48 32 
+48 38 
+65 
+48 41 39 
+48 
+32 39 
+48 39 
+41 39 
+41 
 ------------------------
 association rules
-set([4])=>frozenset([2])
-set([5])=>frozenset([1])
-set([5])=>frozenset([1, 2])
-set([1, 5])=>frozenset([2])
-set([2, 5])=>frozenset([1])
-set([5])=>frozenset([2])
+set([48, 38])=>frozenset([39]) support: 0.0692134933418 confidence: 0.768126888218
+set([48, 41])=>frozenset([39]) support: 0.0835507361448 confidence: 0.816810822799
+set([41])=>frozenset([39]) support: 0.129466209932 confidence: 0.763733690197

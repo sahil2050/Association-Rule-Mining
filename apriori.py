@@ -45,7 +45,9 @@ def apriori_frequent_itemsets(d,sup,conf):
     data = d
     min_sup = sup
     min_conf = conf
+    #print ("min_sup" + str(min_sup))
     l1 = find_frequent_1_itemsets()
+    #print len(l1)
     retValue = l1.copy()
     while(len(l1)!=0):
         l = set()

@@ -21,10 +21,11 @@ def association_rules(s):
     subsets = get_all_combinations(list(s))
     for subset in subsets:# subset => s - subset
         if(len(subset) > 0 and len(subset) < len(s)):
-            confidence = get_support(s)/get_support(subset)
+            support = get_support(s)
+            confidence = support/get_support(subset)
             #print confidence
             if(confidence >= min_conf):
-                rules.append(str(subset) + "=>" + str(s-subset))
+                rules.append(str(subset) + "=>" + str(s-subset)+ " support: " + str(support/len(data)) + " confidence: " + str(confidence))
     return rules
 
 
@@ -51,30 +52,42 @@ def main():
     #print "paths" + str(paths)
     #l = [1,2,3]
     #print get_all_combinations(l)
-    #l = [1,2,3,4,5]
+    #l = [39,48,38,32,41,65]
     #for i in l:
     #    print conditional_paths(fp_tree,link,i)
-    #fp_tree,link,support = conditional_fp_tree(conditional_paths(fp_tree,link,3))
+    #fp_tree,link,support = conditional_fp_tree(conditional_paths(fp_tree,link,32))
+    #print support
+    #print link
     #for child in fp_tree.getChildren():
     #    print str(child.value) + ' '+ str(child.support)
     #    print "##"
     #    for c in child.getChildren():
     #          print str(c.value) + ' '+ str(c.support)
     #print "$$"
+    #print conditional_paths(fp_tree,link,48)
+    #fp_tree,link,support = conditional_fp_tree(conditional_paths(fp_tree,link,48))
+    #print support
+    #for child in fp_tree.getChildren():
+    #    print str(child.value) + ' '+ str(child.support)
+    #    print "##"
+    #    for c in child.getChildren():
+    #          print str(c.value) + ' '+ str(c.support)
+    #print "$$"
+    #print get_support(set([32,39,48]))
     rules = []
     print ("------------------------")
     print ("min_sup " + sys.argv[2])
     print ("min_conf " + str(min_conf))
     print ("------------------------")
     print "frequent itemsets"
-    if sys.argv[4] == "apriori":
+    if sys.argv[4] == "fp":
         for itemset in FP_growth(fp_tree,link,support,set()):
             rules = rules + association_rules(itemset)
             for item in itemset:
                 sys.stdout.write(str(item)+' ')
             if (len(itemset) > 0):
                 sys.stdout.write('\n')
-    elif sys.argv[4] == "fp":
+    elif sys.argv[4] == "apriori":
         for itemset in apriori_frequent_itemsets(data,min_sup,min_conf):
             rules = rules + association_rules(itemset)
             for item in itemset:

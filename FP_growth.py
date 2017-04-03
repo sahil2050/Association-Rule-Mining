@@ -91,8 +91,9 @@ def FP_tree(d,sup,conf):
         if (support[key] >= min_sup):
             link[key] = None
             currLink[key] = None
-    #print support
-    #print link
+    #print "$$$"
+    #print [(x,support[x]) for x in support if support[x] >= min_sup ]
+    #print min_sup
     #print sorted(support.keys(), key = support.get, reverse = True)
     tree = Treenode(None,None)
     for transaction in data:
@@ -131,7 +132,7 @@ def conditional_fp_tree(paths):
     for (path,sup) in paths:
         for x in path:
             support[x] = support.get(x, 0) + sup
-    for key in support.keys():
+    for x in support.keys():
         if support[x] >= min_sup:
             link[x] = None
             currLink[x] = None
@@ -194,6 +195,8 @@ def FP_growth(tree,link,support,suffix):
     else:
         frequent_itemsets = set()
         l = sorted(support.keys(), key = support.get, reverse = True)
+        l = [x for x in l if support[x] >= min_sup ]
+        #print l
         for item in l:
             (ctree,clink,csupport) = conditional_fp_tree(conditional_paths(tree,link,item))
             csuffix = suffix.copy()

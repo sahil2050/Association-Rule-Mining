@@ -14,6 +14,12 @@ To run program with dataset
 
 where algo = apriori/fp
 
+License
+-------
+
+The `python-fp-growth` package is made available under the terms of the
+MIT License.
+
 Copyright © 2017 [Sahil Aggarwal][me]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

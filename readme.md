@@ -17,7 +17,7 @@ where algo = apriori/fp
 License
 -------
 
-The `python-fp-growth` package is made available under the terms of the
+The `Association-Rule-Mining` package is made available under the terms of the
 MIT License.
 
 Copyright © 2017 [Sahil Aggarwal][me]

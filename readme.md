@@ -1,10 +1,10 @@
 List Of Files
 -------------
-apriori.py 
-transactio.py
-FP_growth.py
-association_rules.py
-readme(this file)
+    apriori.py 
+    transaction.py
+    FP_growth.py
+    association_rules.py
+    readme(this file)
 
 Usage
 -----

@@ -1,0 +1,26 @@
+------------------------
+min_sup 0.2
+min_conf 0.7
+------------------------
+frequent itemsets
+2 4 
+5 
+3 
+1 2 
+1 5 
+1 2 5 
+4 
+2 3 
+2 5 
+1 
+1 3 
+1 2 3 
+2 
+------------------------
+association rules
+set([4])=>frozenset([2])
+set([5])=>frozenset([1])
+set([5])=>frozenset([1, 2])
+set([1, 5])=>frozenset([2])
+set([2, 5])=>frozenset([1])
+set([5])=>frozenset([2])

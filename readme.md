@@ -1,15 +1,15 @@
-List Of Files
+<h2>List Of Files<\h2>
 -------------------------------------------------------------------------------
-apriori.py
-transactio.py
-FP_growth.py
-association_rules.py
-readme(this file)
+apriori.py <\br>
+transactio.py <\br>
+FP_growth.py<\br>
+association_rules.py<\br>
+readme(this file)<\br>
 
-Usage
+<h2>Usage<\h2>
 --------------------------------------------------------------------------------
-To run program with dataset 
+To run program with dataset<\br> 
 
-association_rules.py path_to_dataset.txt min_sup min_conf algo
+<i>association_rules.py path_to_dataset.txt min_sup min_conf algo<\i><\br>
 
 where algo = apriori/fp

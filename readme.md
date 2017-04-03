@@ -10,11 +10,11 @@ Usage
 -----
 To run program with dataset 
 
-- 'association_rules.py path_to_dataset.txt min_sup min_conf algo'
+    association_rules.py path_to_dataset.txt min_sup min_conf algo
 
 where algo = apriori/fp
 
-Copyright © 2009 [Sahil Aggarwal][me]
+Copyright © 2017 [Sahil Aggarwal][me]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
